@@ -10,21 +10,19 @@ namespace ind
     {
         static void Main(string[] args)
         {
-           // Ind a = new Ind();
-            Console.WriteLine("Количество книг");
-            for (int i = 0; i < 2; i++)
-            {
-                Ind a = new Ind() { Name = Console.ReadLine(), Book = Console.ReadLine() };
-                //Ind b = new Ind() { Name = Console.ReadLine(), Book = Console.ReadLine() };
-                Console.WriteLine(a.Name + "i = " + i);
-            }
-           
+            string[] arr = null;
+            string taq = " "; 
+            var a = new Ind(5);
 
-            //for (int i = 0; i < 5; i++)
-            //{
-            //    Console.Write($"{a.Name[i]} ");
-            //    Console.WriteLine(a.Book[i]);
-            //}
+            //  Console.WriteLine(a.Check("7") + "такой строки нет ");
+
+            Console.WriteLine();
+            
+            Console.WriteLine(a.Print(taq));
+
+
+
+
 
 
 
@@ -34,11 +32,8 @@ namespace ind
             //a[3] = new Ind { Name = "Dostoevsckui3", Book = "Idiot3" };
             //a[4] = new Ind { Name = "Dostoevsckui4", Book = "Idiot4" };
 
-            //for (int i = 0; i < 5; i++)
-            //{
-            //    Console.Write($"{a[i].Name} ");
-            //    Console.WriteLine(a[i].Book);
-            //}
+
         }
     }
 }
+
