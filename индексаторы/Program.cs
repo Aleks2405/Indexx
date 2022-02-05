@@ -10,28 +10,21 @@ namespace ind
     {
         static void Main(string[] args)
         {
-            string[] arr = null;
-            string taq = " "; 
-            var a = new Ind(5);
-
-            //  Console.WriteLine(a.Check("7") + "такой строки нет ");
-
+          
+            string taq = " ";
+            int size = 5;
+            int ykaz = 3; //переменная для замены строки 
+            string vvod = "da";
+            var a = new Ind(size);
             Console.WriteLine();
-            
+
+            if (vvod == "net")
+            {
+                a[ykaz] = Console.ReadLine();  // работает поправок вносить не нужно                               
+            }
+            a.del(2);
             Console.WriteLine(a.Print(taq));
-
-
-
-
-
-
-
-            //a[0] = new Ind { Name = "Dostoevsckui", Book = "Idiot" };
-            //a[1] = new Ind { Name = "Dostoevsckui1", Book = "Idiot1" };
-            //a[2] = new Ind { Name = "Dostoevsckui2", Book = "Idiot2" };
-            //a[3] = new Ind { Name = "Dostoevsckui3", Book = "Idiot3" };
-            //a[4] = new Ind { Name = "Dostoevsckui4", Book = "Idiot4" };
-
+                                                                
 
         }
     }

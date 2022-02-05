@@ -9,15 +9,10 @@ namespace ind
 
     class Ind
     {
-        //public string Name { get; set; }
         public string Book { get; set; }
-
-        //public int Number { get; set; } 
-
+             
         private string[] arr;
         private int size;
-
-        public Ind() { }
 
         public Ind(int size)                /*конструктор */
         {
@@ -33,6 +28,7 @@ namespace ind
                 for (int i = 0; i < arr.Length; i++)
                 {
                      s += arr[i];
+               
                 }
            
             return s;
@@ -54,6 +50,12 @@ namespace ind
             }
             return s;
 
+        }
+        public void del(int size)             /* удаление элемента*/
+        {
+            List<string> tmp = new List<string>(arr);
+            tmp.RemoveAt(size);
+            arr = tmp.ToArray();
         }
 
        
