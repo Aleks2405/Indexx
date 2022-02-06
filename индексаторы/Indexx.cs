@@ -56,9 +56,12 @@ namespace ind
             List<string> tmp = new List<string>(arr);
             tmp.RemoveAt(size);
             arr = tmp.ToArray();
+            //throw new ArgumentOutOfRangeException();
         }
-
-       
+        public void dob(int newsize, string a) {  // добавим элемент
+            Array.Resize(ref arr, newsize);
+            arr[newsize - 1] = a;
+       }
 
         public string this[int index]                /*индексатор*/
         {

@@ -13,8 +13,9 @@ namespace ind
           
             string taq = " ";
             int size = 5;
-            int ykaz = 3; //переменная для замены строки 
+            int ykaz = 3;                //переменная для замены строки 
             string vvod = "da";
+            string strig = "odna is book";
             var a = new Ind(size);
             Console.WriteLine();
 
@@ -23,7 +24,10 @@ namespace ind
                 a[ykaz] = Console.ReadLine();  // работает поправок вносить не нужно                               
             }
             a.del(2);
-            Console.WriteLine(a.Print(taq));
+            a.dob(5, strig);
+
+            a[0] = "asdda";
+            Console.WriteLine(a.Print(taq) + "");
                                                                 
 
         }
