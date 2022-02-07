@@ -10,26 +10,31 @@ namespace ind
     {
         static void Main(string[] args)
         {
-          
-            string taq = " ";
-            int size = 5;
-            int ykaz = 3;                //переменная для замены строки 
-            string vvod = "da";
-            string strig = "odna is book";
-            var a = new Ind(size);
-            Console.WriteLine();
-
-            if (vvod == "net")
+            try
             {
-                a[ykaz] = Console.ReadLine();  // работает поправок вносить не нужно                               
+               
+                int size = 5;
+                int ykaz = 3;                //переменная для замены строки 
+                string vvod = "da";
+                string strig = "odna is book";
+
+                var a = new Ind(size);
+                Console.WriteLine();
+
+                if (vvod == "net")
+                {
+                    Console.WriteLine("книгу по каким номером необходимо перезаписать");
+                    a[ykaz] = Console.ReadLine();  // работает поправок вносить не нужно                               
+                }
+                 a.Del(0);
+                a.Dob(size, strig);   // добавляю в конец думаю что логично, т.к если нужно в начало стоит воспользовать индексатором!!!!
+
+                Console.WriteLine(a.Print());
+            }                                           
+            catch (IndexOutOfRangeException e)  // решил ловить исключение выход за границы по всей программе. делал исключение самостояятельно оно работает 
+            {
+                Console.WriteLine("Ошибочкааа");
             }
-            a.del(2);
-            a.dob(5, strig);
-
-            a[0] = "asdda";
-            Console.WriteLine(a.Print(taq) + "");
-                                                                
-
         }
     }
 }

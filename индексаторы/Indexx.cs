@@ -9,7 +9,7 @@ namespace ind
 
     class Ind
     {
-        public string Book { get; set; }
+       // public string Book { get; set; }    // так и не придумал как в программе правильно воспользоваться (((((
              
         private string[] arr;
         private int size;
@@ -22,12 +22,15 @@ namespace ind
             {
                 arr[i] = Console.ReadLine();
             }
+            //throw new IndexOutOfRangeException();  
+
         }
-        public string Print(string s)                /*   печать*/
+        public string Print()                /*   печать*/
         {
+             string s = null;
                 for (int i = 0; i < arr.Length; i++)
                 {
-                     s += arr[i];
+                     s += arr[i] + " ";
                
                 }
            
@@ -51,16 +54,16 @@ namespace ind
             return s;
 
         }
-        public void del(int size)             /* удаление элемента*/
+        public void Del(int size)             /* удаление элемента*/
         {
             List<string> tmp = new List<string>(arr);
             tmp.RemoveAt(size);
             arr = tmp.ToArray();
-            //throw new ArgumentOutOfRangeException();
+            //throw new IndexOutOfRangeException();   // сам выбивал ошибку для проверки работы исключения
         }
-        public void dob(int newsize, string a) {  // добавим элемент
-            Array.Resize(ref arr, newsize);
-            arr[newsize - 1] = a;
+        public void Dob(int size, string a) {  // добавим элемент
+            Array.Resize(ref arr, size);
+            arr[size - 1] = a;
        }
 
         public string this[int index]                /*индексатор*/
